@@ -7,7 +7,7 @@ from flask_bootstrap import Bootstrap
 
 
 
-app=Flask(__name__)
+app = Flask(__name__, template_folder='templates') 
 Bootstrap(app)
 app.config['SECRET_KEY']='Ekmys@123'
 
