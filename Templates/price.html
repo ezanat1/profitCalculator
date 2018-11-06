@@ -1,0 +1,52 @@
+{% extends 'bootstrap/base.html' %}
+{% import 'bootstrap/wtf.html' as wtf%}
+{% block title %}
+Calculations
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center">Profit Report</h1>
+
+<div class="list-group text-center">
+        <a class="list-group-item list-group-item-action flex-column align-items-start ">
+          <div class="d-flex w-100 justify-content-between">
+            <h2 class="mb-1">Proceeds</h2>
+            <h5>ALLOTMENT * FINAL SHARE PRICE </h5>
+          </div>
+          <h1 class="text-center">$ {{ calcProceeds }}</h1>
+          <h1>{{ symb }}</h1>
+          
+        </a>
+        <a class="list-group-item list-group-item-action flex-column align-items-start ">
+                <div class="d-flex w-100 justify-content-between">
+                  <h2 class="mb-1">Cost</h2>
+                  <h5>ALLOTMENT x INITIAL SHARE PRICE + COMMISIONS + TAX ON CAPITAL GAIN(%)</h5>
+                </div>
+                <h1 class="text-center color">$ {{ calcCost }}</h1>
+                
+              </a>
+        <a class="list-group-item list-group-item-action flex-column align-items-start ">
+                <div class="d-flex w-100 justify-content-between">
+                    <h2 class="mb-1">Net Profit</h2>
+                    <h5>Proceeds - Cost</h5>
+                    </div>
+                    <h1 class="text-center">$ {{ netProfit }}</h1>   
+                  </a>
+        <a class="list-group-item list-group-item-action flex-column align-items-start ">
+                <div class="d-flex w-100 justify-content-between">
+                    <h2 class="mb-1">Return on Investment </h2>
+                    <h5>100+ NET PROFIT -COST /COST *100</h5>
+                    </div>
+                    <h1 class="text-center"> {{ calcReturn }}%</h1>   
+                    </a>
+        <a class="list-group-item list-group-item-action flex-column align-items-start ">
+                <div class="d-flex w-100 justify-content-between">
+                    <h2 class="mb-1">Return on Investment </h2>
+                    <h5>COMMISIONS / ALLOTMENT + INITIAL SHARE PRICE</h5>
+                    </div>
+                    <h1 class="text-center"> $ {{ calcBreakE }}</h1>   
+                    </a>
+      </div>
+    </div>
+{% endblock %}

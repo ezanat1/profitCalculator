@@ -1,0 +1,18 @@
+{% extends 'bootstrap/base.html' %}
+{% import 'bootstrap/wtf.html' as wtf%}
+{% block title %}
+Stock Profit Calculator
+{% endblock %}
+
+{% block content %}
+<div class="container">
+<form method="POST" action="/">
+    <d1>
+        <h1 style='background:lightblue' class="jumbotron text-center">Calculate Your Stocks</h1>
+        {{wtf.quick_form(form)}}
+        <input class='btn btn-primary'type="submit" value="Submit">
+    </d1>
+
+</form>
+</div>
+{% endblock %}
