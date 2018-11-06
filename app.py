@@ -1,4 +1,4 @@
-from flask import Flask,render_template,flash,redirect,url_for,session,logging,request
+from flask import Flask,render_template,request
 import requests
 from flask_wtf import Form
 from wtforms import StringField,PasswordField,FloatField,SubmitField
@@ -68,6 +68,6 @@ def index():
     return render_template('home.html',form=form)
 
 if __name__=='__main__':
-    app.run(debug=True,port=300)
+    app.run(debug=True)
 
-render = web.template.render('templates/')
+
