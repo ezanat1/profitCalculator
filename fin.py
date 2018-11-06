@@ -1,4 +1,3 @@
-
 from flask import Flask,render_template,flash,redirect,url_for,session,logging,request
 import requests
 from flask_wtf import Form
