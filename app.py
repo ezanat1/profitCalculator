@@ -64,11 +64,10 @@ def index():
         calcBreakE=calcBreakEven(initialSharePrice,allotment,buyCommission,sellCommision)
         #Return on investement
         calcReturn=returnOnInvestment(netProfit,calcCost)
-        return render_template('price.html',form=form,calcProceeds=calcProceeds,calcCost=calcCost,netProfit=netProfit,calcBreakE=calcBreakE,calcReturn=calcReturn)
-        
+        return render_template('price.html',form=form,calcProceeds=calcProceeds,calcCost=calcCost,netProfit=netProfit,calcBreakE=calcBreakE,calcReturn=calcReturn)  
     return render_template('home.html',form=form)
 
 if __name__=='__main__':
-    app.run(debug=True)
+    app.run(debug=True,port=300)
 
-
+render = web.template.render('templates/')
